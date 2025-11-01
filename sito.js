@@ -15,10 +15,31 @@
 
 //ESERCIZI IN JS
 // ESERCIZIO 7: Scrivi una funzione per cambiare il contenuto del tag h1 in qualcos'altro
+function newH1(){
+    let titolo = document.querySelector('h1');
+    titolo.textContent = 'ciao a tutti';
+}
+ newH1()
 // ESERCIZIO 8: Scrivi una funzione per cambiare il colore di background della pagina
+function cambiaSfondo() {
+      document.body.style.backgroundColor = 'red';
+    }
+    cambiaSfondo();
 // ESERCIZIO 9: Scrivi una funzione per cambiare l'indirizzo presente nel futuro in un altro, fittizio
+function nuovoIndirizzo(){
+    let indirizzo = document.getElementsByClassName('indirizzo')[0];
+    indirizzo.textContent = 'via frazione izzalini todi'
+}
+nuovoIndirizzo();
 // ESERCIZIO 10: Scrivi una funzione per aggiungere una classe CSS ad ogni link Amazon della tabella
+function newClass() {
+  const link = document.querySelectorAll('table a');
+
+  for (let i = 0; i < link.length; i++) {
+    link[i].classList.add('amazon');
+  }
+}
+newClass();
 // ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
 // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in uno differente, ogni volta che viene invocata
-
 
