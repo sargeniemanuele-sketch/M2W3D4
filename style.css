@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: azure;
+}
+header{
+    text-align:center;
+}
+table{
+    margin-top:50px;
+}
+
+.imgs{
+    width: 200px;
+}
+.contenuto{
+    text-align: center;
+    padding-left:30px;
+    margin:auto;
+}
+
+footer{
+    margin-top:50px;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p{
+    margin-bottom: 15px;
+}
+        
+footer form {
+  display: inline-block;      
+  text-align: left;           
+}
+
+footer input,
+footer textarea{
+  display: block;             
+  margin: 10px 0;             
+  padding: 8px;
+  width: 250px;                
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  }
