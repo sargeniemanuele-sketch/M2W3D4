@@ -19,21 +19,21 @@ function newH1(){
     let titolo = document.querySelector('h1');
     titolo.textContent = 'ciao a tutti';
 }
- newH1()
+ 
 // ESERCIZIO 8: Scrivi una funzione per cambiare il colore di background della pagina
 function cambiaSfondo() {
       document.body.style.backgroundColor = 'red';
     }
-    cambiaSfondo();
+    
 // ESERCIZIO 9: Scrivi una funzione per cambiare l'indirizzo presente nel futuro in un altro, fittizio
 function nuovoIndirizzo(){
     let indirizzo = document.getElementsByClassName('indirizzo')[0];
     indirizzo.textContent = 'via frazione izzalini todi'
 }
-nuovoIndirizzo();
+
 // ESERCIZIO 10: Scrivi una funzione per aggiungere una classe CSS ad ogni link Amazon della tabella
 function newClass() {
-  const link = document.querySelectorAll('table a');
+  let link = document.querySelectorAll('table a');
 
   for (let i = 0; i < link.length; i++) {
     link[i].classList.add('amazon');
@@ -41,5 +41,34 @@ function newClass() {
 }
 newClass();
 // ESERCIZIO 11: Scrivi una funzione per aggiungere/togliere una classe CSS a tutte le immagini della tabella; questa classe deve modificare la visibilità/invisibilità dell'immagine
+function newImage(){
+  let image = document.querySelectorAll('img');
+  for (let i = 0;i < image.length;i++){
+    image[i].classList.toggle('immagine');
+  }
+}
+
 // ESERCIZIO 12: Scrivi una funzione per cambiare il colore del prezzo di ogni prodotto in uno differente, ogni volta che viene invocata
+
+let indiceColore = 0; 
+function newColor() {
+  let prezzi = document.getElementsByClassName('prezzo'); 
+  let colori = ['blue', 'white', 'green', 'brown', 'yellow', 'skyblue', 'red'];
+
+  for (let i = 0; i < prezzi.length; i++) {
+    let colore = colori[(indiceColore + i) % colori.length];
+    prezzi[i].style.color = colore;
+  }
+
+  indiceColore = (indiceColore + 1) % colori.length; 
+}
+
+function cambiaTutto() {      //funzione totale
+      newH1();
+      cambiaSfondo();
+      nuovoIndirizzo();
+      newImage();
+      newColor();
+    }
+
 
